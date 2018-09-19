@@ -17,17 +17,65 @@ img {
 
 h1, h2, h3 {
   margin: 0;
-  padding: 1em 0;
+  padding: 15px 0;
 }
 
 p {
   font-size: 1em;
   margin: 0;
-  padding: 1em 0.5em;
+  padding: 20px;
 }
 
 .content {
-  padding: 0 0 1em 0;
+  padding: 5px 0px;
+}
+
+/* Navbar */
+
+.navbar {
+  color: white;
+  background-color: #222831;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  padding: 10px;
+  position: fixed;
+  transition: 0.5s ease-in-out;
+  top: -50px;
+  width: 100%;
+}
+
+.navbar img {
+  height: 28px;
+  padding: 0 1px;
+  width: 28px;
+}
+
+.navbar a {
+  color: white;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  opacity: 0.65;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar p {
+  padding: 2px 15px;
+}
+
+.shownav {
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+  top: 0px;
+}
+
+.smnav {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
 }
 
 /* Title */
@@ -48,16 +96,21 @@ p {
   width: 100%;
   height: 450px;
   z-index: -11;
-  }
+}
 
-  .title-section h1 {
+.title-section h1 {
   padding-top: 100px;
   padding-bottom: 0;
-  }
-
-  /* What We Do */
-.whatwedotext {
 }
+
+.navbarswitch {
+  position: absolute;
+  top: 440px;
+}
+
+/* What We Do */
+
+.whatwedotext {}
 
 .card-content p {
   text-align: left;
@@ -67,7 +120,7 @@ p {
   padding: 0.5em;
 }
 
-  /* Section B */
+/* Section B */
 
 .section-b {
   color: white;
@@ -78,7 +131,7 @@ p {
   text-align: left;
 }
 
-  /* About Us */
+/* About Us */
 
 .aboutus {
   text-align: center;
@@ -93,29 +146,36 @@ p {
   text-align: left;
 }
 
-  /* Newsletter */
+/* Newsletter */
 
-  .newsletter {
+.newsletter {
   color: white;
   background-color: #222831;
-  padding: 1em;  }
+  padding: 20px;
+}
 
-  .submissionbox {
+.submissionbox {
   border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #222831;
   box-sizing: border-box;
   display: inline-block;
   font-size: 1em;
-  margin: 0.1em 0;
-  padding: 0.2em 0.3em;
+  margin: 10px 5px;
+  padding: 7px 10px;
   width: 60%;
 }
 
 .submitbutton {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #222831;
   font-size: 1em;
-  padding: 0.2em 0.3em;
+  padding: 7px 10px;
 }
 
-  /* Social Media */
+/* Social Media */
 
 .bottombar {
   background-color: #00adb5;
@@ -132,6 +192,7 @@ p {
 
 .bottombar img:hover {
   opacity: 0.65;
+  transition: 0.3s ease-in-out;
 }
 
 .joelangley {
@@ -142,38 +203,31 @@ p {
 /* Media Queries */
 
 @media (min-width: 700px) {
-
-h1 {
-  font-size: 3em;
-}
-
-.whatwedogrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr
-}
-
-.whatwedogrid .card {
-  padding: 0 0.3em;
-}
-
-.content {
-  padding: 1em 1em;
-}
-
+  h1 {
+    font-size: 3em;
+  }
+  .whatwedogrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+  }
+  .whatwedogrid .card {
+    padding: 0 20px;
+  }
+  .content {
+    padding: 30px;
+  }
 }
 
 @media (min-width: 1200px) {
-
   .content {
-    padding: 2em 5em;
+    padding: 30px 200px;
   }
-
   .quote {
     padding: 1em 0;
   }
-
   .secbauwrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0px 200px;
   }
 }

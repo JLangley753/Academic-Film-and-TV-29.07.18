@@ -32,13 +32,13 @@ p {
 
 /* Title */
 
-#title-section {
+.title-section {
   color: white;
   min-height: 450px;
   text-align: center;
 }
 
-#title-section .bg-image {
+.title-section .bg-image {
   background: url('/img/beta.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -50,14 +50,13 @@ p {
   z-index: -11;
   }
 
-  #title-section h1 {
+  .title-section h1 {
   padding-top: 100px;
   padding-bottom: 0;
   }
 
   /* What We Do */
-
-#whatwedotext {
+.whatwedotext {
 }
 
 .card-content p {
@@ -70,33 +69,33 @@ p {
 
   /* Section B */
 
-#section-b {
+.section-b {
   color: white;
   background-color: #393e46;
 }
 
-#section-b p {
+.section-b p {
   text-align: left;
 }
 
   /* About Us */
 
-#aboutus {
+.aboutus {
   text-align: center;
 }
 
-#aboutus img {
+.aboutus img {
   height: auto;
   width: 100%;
 }
 
-#aboutus p {
+.aboutus p {
   text-align: left;
 }
 
   /* Newsletter */
 
-  #newsletter {
+  .newsletter {
   color: white;
   background-color: #222831;
   padding: 1em;  }
@@ -118,24 +117,24 @@ p {
 
   /* Social Media */
 
-#bottombar {
+.bottombar {
   background-color: #00adb5;
   color: white;
   padding: 1em;
   text-align: center;
 }
 
-#bottombar img {
+.bottombar img {
   display: inline-block;
   height: 48px;
   width: auto;
 }
 
-#bottombar img:hover {
+.bottombar img:hover {
   opacity: 0.65;
 }
 
-#joelangley {
+.joelangley {
   font-size: 0.6em;
   padding: 3em 0 0 0;
 }
@@ -148,12 +147,12 @@ h1 {
   font-size: 3em;
 }
 
-#whatwedogrid {
+.whatwedogrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr
 }
 
-#whatwedogrid .card {
+.whatwedogrid .card {
   padding: 0 0.3em;
 }
 
@@ -169,11 +168,11 @@ h1 {
     padding: 2em 5em;
   }
 
-  #quote {
+  .quote {
     padding: 1em 0;
   }
 
-  #secbauwrap {
+  .secbauwrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

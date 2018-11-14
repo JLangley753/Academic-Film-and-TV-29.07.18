@@ -4,10 +4,9 @@ body {
   background-color: #eeeeee;
   color: #222831;
   font-size: 1.1em;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Cinzel', serif;
   line-height: 1.5;
   margin: 0;
-  text-align: center;
 }
 
 img {
@@ -18,6 +17,7 @@ img {
 h1, h2, h3 {
   margin: 0;
   padding: 15px 0;
+  text-align: center;
 }
 
 p {
@@ -33,7 +33,7 @@ p {
 /* Navbar */
 
 .navbar {
-  color: white;
+  color: #eeeeee;
   background-color: #222831;
   display: flex;
   justify-content: space-between;
@@ -52,9 +52,10 @@ p {
 }
 
 .navbar a {
-  color: white;
+  color: #eeeeee;
   padding: 0;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar a:hover {
@@ -67,7 +68,7 @@ p {
 }
 
 .shownav {
-  opacity: 0.8;
+  opacity: 0.95;
   transition: 0.5s ease-in-out;
   top: 0px;
 }
@@ -81,31 +82,23 @@ p {
 /* Title */
 
 .title-section {
-  color: white;
-  min-height: 450px;
+  color: #eeeeee;
+  background-color: #393e46;
+  padding: 30px 0px;
   text-align: center;
 }
 
-.title-section .bg-image {
-  background: url('/img/beta.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-  height: 450px;
-  z-index: -11;
+.title h1 {
+  font-size: 1.3em;
 }
 
-.title-section h1 {
-  padding-top: 100px;
-  padding-bottom: 0;
+.title h2 {
+  font-size: 1em;
 }
 
 .navbarswitch {
   position: absolute;
-  top: 440px;
+  top: 240px;
 }
 
 /* What We Do */
@@ -123,7 +116,7 @@ p {
 /* Section B */
 
 .section-b {
-  color: white;
+  color: #eeeeee;
   background-color: #393e46;
 }
 
@@ -149,37 +142,79 @@ p {
 /* Newsletter */
 
 .newsletter {
-  color: white;
+  color: #eeeeee;
   background-color: #222831;
   padding: 20px;
+  text-align: center;
 }
 
 .submissionbox {
-  border: 1px solid #ccc;
+  border: 1px solid #eeeeee;;
   border-radius: 4px;
   color: #222831;
   box-sizing: border-box;
-  display: inline-block;
+  font-family: 'Cinzel', serif;
   font-size: 1em;
   margin: 10px 5px;
   padding: 7px 10px;
   width: 60%;
 }
 
+.submissionbox:active, .submissionbox:focus {
+  outline: none;
+}
+
 .submitbutton {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: transparent;
+  border: 1px solid #eeeeee;
   border-radius: 4px;
-  color: #222831;
-  font-size: 1em;
-  padding: 7px 10px;
+  bottom: 5px;
+  color: #eeeeee;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  padding: 19px;
+  overflow: hidden;
+  position: relative;
+  width: 80px;
+}
+
+.submitbutton::before {
+  content: "Submit";
+  position: absolute;
+  bottom: 27%;
+  left: 20%;
+}
+
+.submitbutton:hover::before {
+  animation: submit 0.5s infinite;
+}
+
+@keyframes submit {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.submitbutton:hover {
+  transition: 0.3s ease;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
 }
 
 /* Social Media */
 
 .bottombar {
-  background-color: #00adb5;
-  color: white;
+  background-color: #393e46;
+  color: #eeeeee;
   padding: 1em;
   text-align: center;
 }
@@ -200,12 +235,20 @@ p {
   padding: 3em 0 0 0;
 }
 
+.joelangley a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.joelangley a:hover {
+  opacity: 0.65;
+  transition: 0.5s;
+}
+
 /* Media Queries */
 
 @media (min-width: 700px) {
-  h1 {
-    font-size: 3em;
-  }
   .whatwedogrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr
@@ -229,5 +272,9 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0px 200px;
+    padding: 0;
+  }
+  .section-b, .aboutus {
+    padding: 10px 30px;
   }
 }
